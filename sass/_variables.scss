@@ -8,15 +8,15 @@ $gray: #b0b0b0;
 $black: #333;
 
 /* Typography */
-$body-font: 'sorts-mill-goudy';
-$body-font-italic: 'sorts-mill-goudy-italic';
+$body-font: 'Sorts Mill Goudy', serif;
+$body-font-italic: 'Sorts Mill Goudy';
 $body-font-size: 1.1em;
 
 $blog-title-font: 'nevis';
 $blog-title-font-size: 2.3em;
 $blog-title-text-transform: uppercase;
 
-$navi-font: 'sorts-mill-goudy';
+$navi-font: 'Sorts Mill Goudy';
 $navi-font-size: 1.15em;
 
 $page-title-align: center;
@@ -49,7 +49,7 @@ $subheading-top-spacing: 2em;
 
 $subheadings-align: left;
 
-$code-font-family: 'Cousine';
+$code-font-family: "Monaco", "Consolas", "Ubuntu Mono", monospace;
 $code-font-size: 0.75em;
 $code-padding: 0.4em;
 $code-margin: 0.4em;
@@ -60,12 +60,12 @@ $code-background-color: $white;
 $code-block-line-height: 1.8em;
 
 $caption-font-size: 0.9em;
-$caption-font-family: 'sorts-mill-goudy-italic';
+$caption-font-family: 'Sorts Mill Goudy';
 
-$paginator-font-family: 'sorts-mill-goudy';
+$paginator-font-family: 'Sorts Mill Goudy';
 $paginator-font-size: 1em;
 
-$blockquote-font-family: 'sorts-mill-goudy-italic';
+$blockquote-font-family: 'Sorts Mill Goudy';
 $blockquote-font-size: 1em;
 
 /* On the category listing page */
@@ -80,7 +80,7 @@ $month-indent: 2em;
 /* Layout */
 
 /* Width of the content area */
-$content-width: 45%;
+$content-width: 80%;
 
 /* Space above and below the header section */
 $header-spacing: 150px; 

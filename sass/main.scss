@@ -32,7 +32,7 @@ body {
 	}
 	
 em {
-	font-style: normal;
+	font-style: italic;
 	font-family: $body-font-italic;
 	}
 	
@@ -183,6 +183,7 @@ article {
 		
 	p {
 		.caption {
+			font-style: italic;
 			font-family: $caption-font-family;
 			font-size: $caption-font-size;
 			}
@@ -210,18 +211,11 @@ pre {
 	line-height: $code-block-line-height;
 	background-color: $code-background-color;
 	overflow: hidden;
-	
-	.clip-btn {
-		position: absolute;
-		top: 0px;
-		right: 1em;
-		font-size: 0.8em;
-		text-decoration: underline;
-		
-		@media only screen and (max-width: 1000) {
-			display: none;
-			}
+	@media only screen and (min-width: 0px) and (max-width: 1200px) {
+		margin: 0px auto;
+		width: 90%;
 		}
+	
 	}
 	
 code {
@@ -290,4 +284,26 @@ p > code {
 .title-listing {
 	margin-left: $month-indent;
 	}
-	
+
+div.highlight {
+	overflow: auto;
+}
+
+.highlight > table {
+	width: 100%;
+}
+
+.line-numbers {
+	display: none;
+}
+
+pre {
+	margin: 0em 0em;
+	padding: 0.7em;
+}
+
+figure {
+	@media only screen and (min-width: 0px) and (max-width: 1200px) {
+			margin: 0px;
+		}
+}
