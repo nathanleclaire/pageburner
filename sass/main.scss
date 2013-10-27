@@ -236,7 +236,7 @@ code {
 	}
 	
 /* Inline code */
-p > code {
+p > code, li > code {
 	border: 1px solid $light-gray;
 	@include border-radius(4px);
 	background-color: $code-background-color;
