@@ -235,6 +235,12 @@ code {
 	
 	}
 	
+/* Code blocks first line is wonky with the padding set the way
+   it was before */
+pre > code {
+	padding: 0px;
+}
+	
 /* Inline code */
 p > code, li > code {
 	border: 1px solid $light-gray;
