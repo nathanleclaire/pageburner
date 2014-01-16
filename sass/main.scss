@@ -342,3 +342,12 @@ div.content > h1 {
 a {
 	transition: 0.3s all ease-in-out;
 }
+
+#sidebar {
+	position: fixed;
+	width: 200px;
+}
+
+article#content {
+	margin-left: 250px;
+}
