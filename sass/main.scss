@@ -27,7 +27,7 @@ body {
 	color: $black;
 	
 	@media only screen and (max-width: 1000px) {
-		font-size: 0.9em;
+		font-size: 1em;
 		}
 	}
 	
@@ -72,7 +72,7 @@ h2 {
 /* The main blog header */
 header {
 	margin-bottom: 1em;
-	padding: $header-spacing 0;
+	padding: 0 0;
 	border-bottom: 1px solid $light-gray;
 	text-align: center;
 	
@@ -89,10 +89,12 @@ header {
 		}
 	
 	.navi {
+
 		font-family: $navi-font;
 		font-size: $navi-font-size;
 		
 		ul {
+
 			margin: $navi-top-spacing 0 0 0;
 			padding: 0;
 			list-style: none;
@@ -133,8 +135,8 @@ blockquote {
 	}
 	
 article {
-	margin-left: 250px;
-	@media only screen and (min-width: 0px) and (max-width: 1200px) {
+	margin-left: 350px;
+	@media only screen and (min-width: 0px) and (max-width: 768px) {
 		margin-left: 0px;
 	}
 	padding: 0;
@@ -194,11 +196,6 @@ article {
 		}
 		
 	p {
-		.caption {
-			font-style: italic;
-			font-family: $caption-font-family;
-			font-size: $caption-font-size;
-			}
 			
 		img {
 			max-width: 100%;
@@ -298,10 +295,14 @@ p > code, li > code {
 	font-family: $month-font-family;
 	font-size: $month-font-size;
 	}
-	
-.title-listing {
+
+article ul {
+	text-align: left;
+}
+
+li.archive-post {
 	margin-left: $month-indent;
-	}
+}
 
 div.highlight {
 	overflow: auto;
@@ -346,8 +347,39 @@ a {
 	transition: 0.3s all ease-in-out;
 }
 
-div#sidebar {
+#sidebar {
 	float: left;
 	position: fixed;
-	width: 200px;
+	width: 300px;
+	@media only screen and (min-width: 0px) and (max-width: 768px) {
+		float: none;
+		position: relative;
+		width: 100%;
+	}
+}
+
+#shameless-self-promotion {
+	text-align: center;
+	@media only screen and (min-width: 0px) and (max-width: 768px) {
+		display: none;
+	}
+	@media only screen and (min-width: 1000px) {
+		font-size: 0.9em;
+	}
+}
+
+img {
+	display: block;
+	margin: 0px auto;
+}
+
+.caption {
+	font-style: italic;
+	text-align: center;
+	font-family: $caption-font-family;
+	font-size: $caption-font-size;
+}
+
+li.title {
+	text-align: left;
 }
