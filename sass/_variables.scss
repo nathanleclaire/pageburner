@@ -8,15 +8,15 @@ $gray: #b0b0b0;
 $black: #333;
 
 /* Typography */
-$body-font: 'Sorts Mill Goudy', serif;
-$body-font-italic: 'Sorts Mill Goudy';
+$body-font: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$body-font-italic: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 $body-font-size: 1.1em;
 
-$blog-title-font: 'nevis';
+$blog-title-font: $body-font;
 $blog-title-font-size: 2.3em;
 $blog-title-text-transform: uppercase;
 
-$navi-font: 'Sorts Mill Goudy';
+$navi-font: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 $navi-font-size: 1.15em;
 
 $page-title-align: center;
@@ -60,19 +60,19 @@ $code-background-color: $white;
 $code-block-line-height: 1.8em;
 
 $caption-font-size: 0.9em;
-$caption-font-family: 'Sorts Mill Goudy';
+$caption-font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 
-$paginator-font-family: 'Sorts Mill Goudy';
+$paginator-font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 $paginator-font-size: 1em;
 
-$blockquote-font-family: 'Sorts Mill Goudy';
+$blockquote-font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 $blockquote-font-size: 1em;
 
 /* On the category listing page */
-$year-font-family: 'nevis';
+$year-font-family: $body-font;
 $year-font-size: 1.3em;
 $year-spacing-bottom: 1.5em;
-$month-font-family: 'nevis';
+$month-font-family: $body-font;
 $month-font-size: 1em;
 $month-spacing-bottom: 0.5em;
 $month-indent: 2em;
