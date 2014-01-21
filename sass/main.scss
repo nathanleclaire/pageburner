@@ -94,11 +94,12 @@ header {
 		
 		ul {
 
-			margin: $navi-top-spacing 0 0 0;
+			margin: $navi-top-spacing 0 $navi-top-spacing 0;
 			padding: 0;
 			list-style: none;
 			
 			li {
+				display: inline;
 				margin: 0;
 				padding: 0 ($navi-link-spacing/2 * 1em);
 				
@@ -285,6 +286,7 @@ p > code, li > code {
 .cat-year {
 	padding-top: $year-spacing-bottom;
 	font-family: $year-font-family;
+	font-weight: bold;
 	font-size: $year-font-size;
 	}
 	
