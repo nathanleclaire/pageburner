@@ -387,3 +387,18 @@ li.title {
 h1, h2, h3, h4, h5, h6 {
 	font-weight: bold;
 }
+
+input#reader-email {
+	border-radius: 5px;
+    width: 80%;	
+	border: 2px solid 777; 
+}
+
+p#success-msg {
+	color: green;
+	display: none;
+}
+
+form#mailing-list-signup {
+	margin-bottom: 50px;
+}

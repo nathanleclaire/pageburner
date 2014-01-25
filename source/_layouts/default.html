@@ -35,10 +35,14 @@
 					</div> <!-- // .navi -->
 				</header>
 				<span id="shameless-self-promotion">
-					<p>I love getting e-mail from readers. You should <a href="mailto:nathanleclaire@gmail.com">send me one</a>.</p>
+					<p>Get hot technology tips delivered straight to your inbox:</p>
+					<form id="mailing-list-signup">
+					<p id="success-msg">Welcome to the mailing list!</p>
+					<input type="text" placeholder="email@domain.com" name="reader-email" id="reader-email">
+					<input type="submit" value="Go" id="go-mailing-list-submit">
+					</form>
 					{% if page.id %}
-						<a target="_blank" style="display: block;" href="https://twitter.com/share?url=http://nathanleclaire.com{{ page.url }}&text=from @upthecyberpunks : " class="social-media-spam">Tweet this article!</a>
-						<p>You might also like:<p>
+					<p><i>You might also like:</i><p>
 						<ul>
 							{% for post in site.related_posts limit:site.recent_posts %}
         						<li class="title">
@@ -57,6 +61,22 @@
 	<script>
 	$(document).ready(function () {
 	    $("code").addClass("prettyprint");
+		$("#mailing-list-signup").submit(function(e) {
+			$this = $(this);
+			e.preventDefault();
+			var email = $this.find('input[name=reader-email]').val();
+			$.ajax({
+				url: '/email_signup',
+				method: 'POST',
+				params: {
+					email: email
+				},
+				success: function() {
+					$this.find('#success-msg').fadeToggle();
+				}
+			});
+			return false;
+		});
 	    $(".social-media-spam").each(function () {
 	        var e = $(this);
 	        var t = e.attr("href");
