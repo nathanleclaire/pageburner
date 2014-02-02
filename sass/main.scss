@@ -397,8 +397,15 @@ input#reader-email {
 p#success-msg {
 	color: green;
 	display: none;
+	opacity: 0;
+	transition: 1s ease-in-out all;
 }
 
 form#mailing-list-signup {
 	margin-bottom: 50px;
+}
+
+.success-msg-showing {
+	opacity: 1;
+	display: block !important;
 }

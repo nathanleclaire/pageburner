@@ -37,9 +37,9 @@
 				<span id="shameless-self-promotion">
 					<p>Get hot technology tips delivered straight to your inbox:</p>
 					<form id="mailing-list-signup">
-					<p id="success-msg">Welcome to the mailing list!</p>
-					<input type="text" placeholder="email@domain.com" name="reader-email" id="reader-email">
-					<input type="submit" value="Go" id="go-mailing-list-submit">
+						<p id="success-msg">Welcome to the mailing list!</p>
+						<input type="text" placeholder="email@domain.com" name="reader-email" id="reader-email">
+						<input type="submit" value="Go" id="go-mailing-list-submit">
 					</form>
 					{% if page.id %}
 					<p><i>You might also like:</i><p>
@@ -64,15 +64,16 @@
 		$("#mailing-list-signup").submit(function(e) {
 			$this = $(this);
 			e.preventDefault();
-			var email = $this.find('input[name=reader-email]').val();
+			var email = $this.find('input').val();
 			$.ajax({
-				url: '/email_signup',
+				url: 'http://localhost:3000/email_signup',
 				method: 'POST',
 				params: {
 					email: email
 				},
 				success: function() {
-					$this.find('#success-msg').fadeToggle();
+					$this.find('#success-msg').addClass('success-msg-showing');
+					$this.find('input').val('');
 				}
 			});
 			return false;
