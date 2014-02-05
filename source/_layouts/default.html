@@ -13,7 +13,7 @@
 		
 		<link href="{{ root_url }}/stylesheets/main.css" rel="stylesheet">
 		<script src="//cdnjs.cloudflare.com/ajax/libs/zepto/1.1.2/zepto.min.js"></script>
-
+		<script src="{{ root_url }}/js/fuse.min.js"></script>
 	<style>
 	/* prettify hemisu */
 	.pln{color:#111}@media screen{.kwd,.str{color:#739200}.com{color:#999}.typ{color:#f05}.lit{color:#538192}.clo,.opn,.pun,.tag{color:#111}.atn{color:#739200}.atv{color:#f05}.dec,.var{color:#111}.fun{color:#538192}}@media print,projection{.str{color:#060}.kwd{color:#006;font-weight:700}.com{color:#600;font-style:italic}.typ{color:#404;font-weight:700}.lit{color:#044}.clo,.opn,.pun{color:#440}.tag{color:#006;font-weight:700}.atn{color:#404}.atv{color:#060}}.prettyprint ol{color:#ccc}ol.linenums{margin-top:0;margin-bottom:0}
@@ -63,7 +63,13 @@
 				    <div style="position: absolute; left: -5000px;"><input type="text" name="b_bb81abde21debade7a3b6c8f8_a77a90269c" value=""></div>
 				</form>
 				</div>
-
+				
+				<p>Quickly search the archive:</p>
+				<input type="text" placeholder="Search the archive" id="archive-search">
+			
+					<ul id="archive-search-populate">
+					</ul>
+				
 				<!--End mc_embed_signup-->
 					{% if page.id %}
 					<p><i>You might like:</i><p>
@@ -84,6 +90,29 @@
 	<script type="text/javascript" src="{{ root_url }}/js/prettify.js"></script>
 	<script>
 	$(document).ready(function () {
+	    var fuse;
+	    prettyPrint();
+	    $.getJSON("/articles.json", function(data) {
+	    	// input:
+	    	// [{title: "Learn Node.js The Troll Way", href: "blahblah"}, { ... }]
+	    	fuse = new Fuse(data, {
+	    	    keys: ['title']
+	    	});
+	    });
+	    
+	    $("#archive-search").keypress(function() {
+	    	var $this = $(this);
+	    	var val = $this.val();
+	    	var result = fuse.search(val).slice(0, 2);
+	    	$list = $("#archive-search-populate");
+	    	$list.empty();
+	    	if (result.length > 0) {
+	    	    $.each(result, function(i, e) {
+	    	        $list.append('<li><a href="'+ e.href +'">'+ e.title +'</a></li>');
+	    	    });
+	    	}
+	    });
+	    
 	    $("code").addClass("prettyprint");
 	    $(".social-media-spam").each(function () {
 	        var e = $(this);
@@ -92,11 +121,12 @@
 	        t += encodeURIComponent(n);
 	        e.attr("href", t)
 	    });
+
 	    var e = window.location.href;
 	    var t = $("#pull-request-link");
 	    var n = "https://github.com/nathanleclaire/blog/edit/master/source/_posts/" + e.split("/").slice(4, 8).join("-") + ".markdown";
 	    t.attr("href", n);
-	    prettyPrint();
+
 	});
 	</script>
 	<script>
