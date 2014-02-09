@@ -35,17 +35,21 @@
 			display: inline !important;
 		}
 
-		input#archive-search {
-			display: block;
-			padding: 8px 0;
-			margin: 0 4% 10px 0;
-			text-indent: 5px;
-			width: 90%;
-			min-width: 130px;
+		img#search-icon {
+			display: inline;
 		}
 
 		ul#archive-search-populate {
+			margin: 0px auto;
 			text-align: left;
+		}
+
+		input#archive-search {
+			margin-bottom: 20px;
+			padding: 8px 0;
+			text-indent: 5px;
+			width: 88%;
+			min-width: 130px;
 		}
 	</style>
 	</head>
@@ -76,24 +80,14 @@
 				    <div style="position: absolute; left: -5000px;"><input type="text" name="b_bb81abde21debade7a3b6c8f8_a77a90269c" value=""></div>
 				</form>
 				</div>
+				<!--End mc_embed_signup-->
 				
 				<p>Quickly search the archive:</p>
-				<input type="text" placeholder="Search the archive" id="archive-search">
-			
-					<ul id="archive-search-populate">
-					</ul>
+				<input type="text" placeholder="Fuzzy search by keyword (e.g. Angular)" id="archive-search">
+				<img src="/images/magnifying-glass.png" id="search-icon" />
+				<ul id="archive-search-populate">
+				</ul>
 				
-				<!--End mc_embed_signup-->
-					{% if page.id %}
-					<p><i>You might like:</i><p>
-						<ul>
-							{% for post in site.related_posts limit:site.recent_posts %}
-        						<li class="title">
-        							<a href="{{ root_url }}{{ post.url }}">{{post.title}}</a>
-        						</li>
-        					{% endfor %}
-						</ul>
-					{% endif %}
 				</span>
 			</div>
 			<div id="content">
@@ -104,29 +98,32 @@
 	<script>
 	$(document).ready(function () {
 	    var fuse;
+
+	    $("code").addClass("prettyprint");
 	    prettyPrint();
+
 	    $.getJSON("/articles.json", function(data) {
 	    	// input:
 	    	// [{title: "Learn Node.js The Troll Way", href: "blahblah"}, { ... }]
 	    	fuse = new Fuse(data, {
-	    	    keys: ['title']
+	    	    keys: ['title', 'tags']
 	    	});
 	    });
 	    
-	    $("#archive-search").keypress(function() {
+	    $("#archive-search").keyup(function() {
 	    	var $this = $(this);
 	    	var val = $this.val();
-	    	var result = fuse.search(val).slice(0, 5);
+	    	var result = fuse.search(val).slice(0, 3);
 	    	$list = $("#archive-search-populate");
 	    	$list.empty();
-	    	if (result.length > 0) {
+	    	if (result.length > 0 && val !== '') {
+				console.log(val);
 	    	    $.each(result, function(i, e) {
 	    	        $list.append('<li><a href="'+ e.href +'">'+ e.title +'</a></li>');
 	    	    });
 	    	}
 	    });
 	    
-	    $("code").addClass("prettyprint");
 	    $(".social-media-spam").each(function () {
 	        var e = $(this);
 	        var t = e.attr("href");

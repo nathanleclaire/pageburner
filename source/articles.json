@@ -2,9 +2,12 @@
 ---
 [
 	{% for post in site.posts %}
-		{
-			"title": "{{ post.title | escape }}",
-			"href": "{{ site.url }}{{ post.url }}"
-		} {% unless forloop.last %} , {% endunless %}
+		{% if post.published != false %}
+			{
+				"title": "{{ post.title | escape }}",
+				"href": "{{ site.url }}{{ post.url }}",
+				"tags": "{% for tag in post.categories %}{{ tag | escape }} {% endfor %}"
+			} {% unless forloop.last %} , {% endunless %}
+		{% endif %}
 	{% endfor %}
 ]
