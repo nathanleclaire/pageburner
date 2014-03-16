@@ -10,72 +10,72 @@ $black: #333;
 /* Typography */
 $body-font: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 $body-font-italic: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-$body-font-size: 1.1em;
+$body-font-size: 1em;
 
 $blog-title-font: $body-font;
-$blog-title-font-size: 2.3em;
+$blog-title-font-size: 2.0em;
 $blog-title-text-transform: uppercase;
 
 $navi-font: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-$navi-font-size: 1.15em;
+$navi-font-size: 1.05em;
 
 $page-title-align: center;
 
-$post-font-size: 1.1em;
-$post-font-line-height: 1.7em;
+$post-font-size: 1em;
+$post-font-line-height: 1.6em;
 $post-align: justify;
 
 $post-first-words-font-variant: small-caps;
-$post-first-words-font-size: 1em;
+$post-first-words-font-size: 0.9em;
 
-$post-title-font-size: 1.6em;
+$post-title-font-size: 1.5em;
 $post-title-font-weight: normal;
 $post-title-font-style: normal;
-$post-title-line-height: 1.3em;
+$post-title-line-height: 1.0em;
 $post-title-align: center;
 
-$date-font-size: 1em;
+$date-font-size: 0.9em;
 $date-font-style: normal;
 
-$heading-font-size: 1.4em;
+$heading-font-size: 1.3em;
 $heading-font-weight: normal;
 $heading-font-style: normal;
-$heading-top-spacing: 1em;
+$heading-top-spacing: 0.9em;
 
-$subheading-font-size: 1.1em;
+$subheading-font-size: 1.0em;
 $subheading-font-weight: bold;
 $subheading-font-style: normal;
-$subheading-top-spacing: 1em;
+$subheading-top-spacing: 0.9em;
 
 $subheadings-align: left;
 
 $code-font-family: "Monaco", "Consolas", "Courier New", monospace;
-$code-font-size: 0.75em;
-$code-padding: 0.4em;
-$code-margin: 0.4em;
+$code-font-size: 1em;
+$code-padding: 0.5em;
+$code-margin: 0.5em;
 $code-border-radius: 3px;
 $code-border-color: $gray;
 $code-background-color: $white;
 
-$code-block-line-height: 1.8em;
+$code-block-line-height: 1.9em;
 
-$caption-font-size: 0.9em;
+$caption-font-size: 0.8em;
 $caption-font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 
 $paginator-font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-$paginator-font-size: 1em;
+$paginator-font-size: 0.9em;
 
 $blockquote-font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-$blockquote-font-size: 1em;
+$blockquote-font-size: 0.9em;
 
 /* On the category listing page */
 $year-font-family: $body-font;
-$year-font-size: 1.3em;
-$year-spacing-bottom: 1.5em;
+$year-font-size: 1.2em;
+$year-spacing-bottom: 1.4em;
 $month-font-family: $body-font;
-$month-font-size: 1em;
-$month-spacing-bottom: 0.5em;
-$month-indent: 2em;
+$month-font-size: 0.9em;
+$month-spacing-bottom: 0.4em;
+$month-indent: 1.9em;
 
 /* Layout */
 
@@ -90,20 +90,22 @@ $top-line-weight: 8px;
 
 /* Space between header links (this will be in ems) */
 $navi-link-spacing: 0.8;     
-$navi-top-spacing: 0.4em;
+$navi-top-spacing: 0.3em;
 
 /* Space between the date and the post */
-$post-content-top-space: 1em;
+$post-content-top-space: 0.9em;
 
 /* Space between the post and the author/tags */
-$post-content-bottom-space: 2em; 
+$post-content-bottom-space: 1.9em; 
 
 /* Space between posts in ems */
 $space-between-posts: 8;
 
 /* Author tags top and bottom spacing */
-$tags-spacing: 1em;
+$tags-spacing: 0.9em;
 
 /* Space before and after a <hr> */
-$hr-spacing: 4em;
+$hr-spacing: 3.9em;
 
+$sidebar-width: 250px;
+$article-margin: $sidebar-width + 50px;

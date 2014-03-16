@@ -134,7 +134,7 @@ blockquote {
 	}
 	
 article {
-	margin-left: 350px;
+	margin-left: $article-margin;
 	@media only screen and (min-width: 0px) and (max-width: 768px) {
 		margin-left: 0px;
 	}
@@ -350,7 +350,7 @@ a {
 #sidebar {
 	float: left;
 	position: fixed;
-	width: 300px;
+	width: $sidebar-width;
 	@media only screen and (min-width: 0px) and (max-width: 768px) {
 		float: none;
 		position: relative;
@@ -433,10 +433,6 @@ li.title {
 	display: inline !important;
 }
 
-#mc-embedded-subscribe {
-	display: inline !important;
-}
-
 img#search-icon {
 	display: inline;
 }
@@ -452,4 +448,14 @@ input#archive-search {
 	text-indent: 5px;
 	width: 88%;
 	min-width: 130px;
+	border: 1px solid #999;
+}
+
+#sidebar-email {
+	margin-bottom: 20px;
+}
+
+#mc-embedded-subscribe {
+	display: inline !important;
+	min-width: 20px !important;
 }
