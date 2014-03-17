@@ -22,7 +22,7 @@ $navi-font-size: 1.05em;
 $page-title-align: center;
 
 $post-font-size: 1em;
-$post-font-line-height: 1.6em;
+$post-font-line-height: 1.7em;
 $post-align: justify;
 
 $post-first-words-font-variant: small-caps;
@@ -51,13 +51,15 @@ $subheadings-align: left;
 
 $code-font-family: "Monaco", "Consolas", "Courier New", monospace;
 $code-font-size: 1em;
-$code-padding: 0.5em;
+$code-padding: 0.2em;
 $code-margin: 0.5em;
 $code-border-radius: 3px;
 $code-border-color: $gray;
 $code-background-color: $white;
 
 $code-block-line-height: 1.9em;
+
+$inline-code-font-size: 0.9em;
 
 $caption-font-size: 0.8em;
 $caption-font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;

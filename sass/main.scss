@@ -242,6 +242,7 @@ pre > code {
 	
 /* Inline code */
 p > code, li > code {
+	font-size: $inline-code-font-size;
 	border: 1px solid $light-gray;
 	@include border-radius(4px);
 	background-color: $code-background-color;
