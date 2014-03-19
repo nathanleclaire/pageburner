@@ -134,7 +134,6 @@ blockquote {
 	}
 	
 article {
-	margin-left: $article-margin;
 	@media only screen and (min-width: 0px) and (max-width: 768px) {
 		margin-left: 0px;
 	}
@@ -459,4 +458,8 @@ input#archive-search {
 #mc-embedded-subscribe {
 	display: inline !important;
 	min-width: 20px !important;
+}
+
+div#content {
+	margin-left: $article-margin;
 }
