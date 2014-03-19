@@ -134,9 +134,6 @@ blockquote {
 	}
 	
 article {
-	@media only screen and (min-width: 0px) and (max-width: 768px) {
-		margin-left: 0px;
-	}
 	padding: 0;
 	font-size: $post-font-size;
 	line-height: $post-font-line-height;
@@ -461,5 +458,8 @@ input#archive-search {
 }
 
 div#content {
+	@media only screen and (min-width: 0px) and (max-width: 768px) {
+		margin-left: 0px;
+	}
 	margin-left: $article-margin;
 }
