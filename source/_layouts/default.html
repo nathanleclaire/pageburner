@@ -97,7 +97,7 @@
 				<!-- Begin MailChimp Signup Form -->
 
 				<div id="mc_embed_signup">
-				<form action="http://nathanleclaire.us3.list-manage.com/subscribe/post?u=bb81abde21debade7a3b6c8f8&amp;id=a77a90269c" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+				<form action="https://nathanleclaire.us3.list-manage.com/subscribe/post?u=bb81abde21debade7a3b6c8f8&amp;id=a77a90269c" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 					<label for="mce-EMAIL">Get my awesome essays about tech delivered to your inbox</label>
 					<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email@domain.com" required>
 					<input type="submit" value="Go" name="subscribe" id="mc-embedded-subscribe" class="button">
@@ -179,18 +179,33 @@
 	    var n = "https://github.com/nathanleclaire/blog/edit/master/source/_posts/" + e.split("/").slice(4, 8).join("-") + ".markdown";
 	    t.attr("href", n);
 
-		var triedModalAlready = localStorage["modal"] ? true : false;
+	    // Only offer mailing list once
+		var tryModal = localStorage["modal"] ? false : true;
+
+		// Don't offer mailing list to people on mobile
+		if ($(window).width() < 720) {
+			tryModal = false;
+		}
+
+		$('#mc-embedded-subscribe').click(function() {
+			// Don't offer mailing list if people have
+			// already clicked to try and sign up
+			tryModal = false;
+			localStorage["modal"] = "true";
+		});
 
 		$(window).scroll(function () {
-			if (!triedModalAlready && document.URL.indexOf('archives') === -1 && document.URL.indexOf('about') === -1) {
+			if (tryModal && document.URL.indexOf('archives') === -1 && document.URL.indexOf('about') === -1) {
 				if (($(window).scrollTop() + $(window).height()) === $(document).height()) {
 					if (supports_html5_storage()) {
-						localStorage["modal"] = "true";
-						$('#mailing-list-modal').modal({
-							fadeDuration: 250
-						});
-						$('#mce-EMAIL-modal').focus();
-						triedModalAlready = true;
+						window.setTimeout(function() {
+							$('#mailing-list-modal').modal({
+								fadeDuration: 250
+							});
+							$('#mce-EMAIL-modal').focus();
+							tryModal = false;
+							localStorage["modal"] = "true";
+						}, 1000);
 					}
 				}
 			}
