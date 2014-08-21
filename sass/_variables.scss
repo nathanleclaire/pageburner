@@ -8,21 +8,21 @@ $gray: #b0b0b0;
 $black: #333;
 
 /* Typography */
-$body-font: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-$body-font-italic: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$body-font: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$body-font-italic: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 $body-font-size: 1em;
 
 $blog-title-font: $body-font;
 $blog-title-font-size: 2.0em;
 $blog-title-text-transform: uppercase;
 
-$navi-font: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$navi-font: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 $navi-font-size: 1.05em;
 
 $page-title-align: center;
 
 $post-font-size: 1em;
-$post-font-line-height: 1.4em;
+$post-font-line-height: 1.7em;
 $post-align: justify;
 
 $post-first-words-font-variant: small-caps;
@@ -50,7 +50,7 @@ $subheading-top-spacing: 0.9em;
 $subheadings-align: left;
 
 $code-font-family: "Ubuntu Mono", "Monaco", "Consolas", "Courier New", monospace;
-$code-font-size: 10px;
+$code-font-size: 14px;
 $code-padding: 0.2em;
 $code-margin: 0.5em;
 $code-border-radius: 3px;
@@ -59,15 +59,15 @@ $code-background-color: $white;
 
 $code-block-line-height: 1.4em;
 
-$inline-code-font-size: 0.9em;
+$inline-code-font-size: 1em;
 
 $caption-font-size: 0.8em;
-$caption-font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$caption-font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 
-$paginator-font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$paginator-font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 $paginator-font-size: 0.9em;
 
-$blockquote-font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$blockquote-font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 $blockquote-font-size: 0.9em;
 
 /* On the category listing page */
