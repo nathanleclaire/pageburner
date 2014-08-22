@@ -7,16 +7,30 @@ sharing: true
 footer: true
 ---
 <style>
-.gridpic {
-	width: 200px;
-	margin: 0px 0px;
-	display: inline;
+@font-face {
+    font-family: 'LeagueGothicRegular';
+    src: url('/font/leaguegothic-regular-webfont.eot');
+    src: url('/font/leaguegothic-regular-webfont.eot?#iefix') format('embedded-opentype'),
+            url('/font/leaguegothic-regular-webfont.woff') format('woff'),
+            url('/font/leaguegothic-regular-webfont.ttf') format('truetype'),
+            url('/font/leaguegothic-regular-webfont.svg#LeagueGothicRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 
-h1.article-callout {
-	display: inline;
-	margin-left: 20px;
-	font-size:18px;
+h1 {
+    text-align: center;
+    font-family: 'LeagueGothicRegular', "Impact", Charcoal, Arial Black, Gadget, Sans serif;
+    text-transform: uppercase;
+    line-height: 1;
+    font-size: 300%;
+    /* Remember to set the correct font weight if using fontface */
+    font-weight: normal;
+}
+
+.gridpic {
+	width: 400px;
+	margin: 0px auto;
 }
 
 ul {
@@ -31,21 +45,20 @@ li {
 	height: 42px;
 }
 
-/* Smartphones (portrait) ----------- */
-@media only screen 
-and (max-width : 900px) {
-    h1.article-callout {
-    	display:block;
-    	margin: 0px 0px;
-    }
+.gridpics a {
+   text-decoration: none; 
+   color: red;
+   transition: 1s ease-in-out all;
+}
+
+.gridpics a:hover {
+   color: black;
 }
 
 </style>
 <h1> Hiya.  </h1>
 
 {%img /images/naaaate.jpg %}
-
-<h2> I'm Nathan LeClaire. </h2>
 
 Welcome, party people.  I'm Nathan LeClaire, a passionate entrepreneur, essayist, and developer with a taste for technology.  Here I put out weekly-ish articles and writings on business and program-ey things.  
 
@@ -64,7 +77,7 @@ If you'd like, you can sign up for my mailing list to keep your finger on the pu
 
 The following posts have become quite popular on the Interwebs, and continue to bring people back to the site to this day!
 
-<ul>
+<ul class="gridpics">
 	<li><a href="http://nathanleclaire.com/blog/2013/11/23/how-i-automated-finding-almost-anyones-email-address/"><img class="gridpic" src="http://nathanleclaire.com/images/autorap/copy-as-curl.jpeg"><h1 class="article-callout">How I Automated "Finding Almost Anyone's Email Address"</h1></a></li>
 	<li><a href="http://nathanleclaire.com/blog/2013/10/27/5-cool-unix-hacks-for-fun-and-productivity/"><img class="gridpic" src="http://nathanleclaire.com/images/five-tips/ctrl-n-vim.jpeg"><h1 class="article-callout">5 Unix Hacks for Fun and Productivity</h1></a></li>
 	<li><a href="http://nathanleclaire.com/blog/2013/12/13/how-to-unit-test-controllers-in-angularjs-without-setting-your-hair-on-fire/"><img class="gridpic" src="http://nathanleclaire.com/images/angularjs-unit-testing/test-code-refactor-cycle.png"><h1 class="article-callout">How to Unit Test AngularJS Controllers Without Setting Your Hair on Fire</h1></a></li>
@@ -79,4 +92,3 @@ So hop aboard the SS Mailing List today.
 <ul style="list-style-type: circle"><li> Nate </li></ul>
 
 <h1 style="font-size: 72px;"><a href="http://nathanleclaire.com/blog">Click here to read my articles and essays.</a></h1>
-
