@@ -83,6 +83,9 @@ header {
             text-decoration: none;
             color: red;
 		}
+        a:hover {
+            color: black;
+        }
 		}
 	
 	.navi {
@@ -101,10 +104,12 @@ header {
 				padding: 0 ($navi-link-spacing/2 * 1em);
 				
 				a {
-					&:hover,
 					&:active{
 						color: $main-color;
 						} 
+					&:hover {
+                        color: $black;
+                    }
 					} /* // a */
 				} /* // li */
 			} /* // ul */
