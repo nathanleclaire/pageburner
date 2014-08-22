@@ -104,10 +104,12 @@ header {
 				padding: 0 ($navi-link-spacing/2 * 1em);
 				
 				a {
+                    text-decoration: none;
 					&:active{
 						color: $main-color;
 						} 
 					&:hover {
+                        text-decoration: underline;
                         color: $black;
                     }
 					} /* // a */
@@ -117,9 +119,11 @@ header {
 	} /* // header */
 	
 a {
+    text-decoration: none;
 	color: $main-color;
 	
 	&:hover {
+        text-decoration: underline;
 		color: $black;
 		}
 	}
