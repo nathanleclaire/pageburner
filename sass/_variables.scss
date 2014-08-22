@@ -13,7 +13,7 @@ $body-font-italic: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "
 $body-font-size: 1em;
 
 $blog-title-font: $body-font;
-$blog-title-font-size: 2.0em;
+$blog-title-font-size: 2em;
 $blog-title-text-transform: uppercase;
 
 $navi-font: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
@@ -31,7 +31,7 @@ $post-first-words-font-size: 0.9em;
 $post-title-font-size: 1.5em;
 $post-title-font-weight: normal;
 $post-title-font-style: normal;
-$post-title-line-height: 1.0em;
+$post-title-line-height: 1em;
 $post-title-align: center;
 
 $date-font-size: 0.9em;
@@ -42,7 +42,7 @@ $heading-font-weight: normal;
 $heading-font-style: normal;
 $heading-top-spacing: 0.9em;
 
-$subheading-font-size: 1.0em;
+$subheading-font-size: 1em;
 $subheading-font-weight: bold;
 $subheading-font-style: normal;
 $subheading-top-spacing: 0.9em;
@@ -85,20 +85,20 @@ $month-indent: 1.9em;
 $content-width: 90%;
 
 /* Space above and below the header section */
-$header-spacing: 20px; 
+$header-spacing: 20px;
 
 /* Weight of the line at the top of the page */
-$top-line-weight: 8px;     
+$top-line-weight: 8px;
 
 /* Space between header links (this will be in ems) */
-$navi-link-spacing: 0.8;     
+$navi-link-spacing: 0.8;
 $navi-top-spacing: 0.3em;
 
 /* Space between the date and the post */
 $post-content-top-space: 0px;
 
 /* Space between the post and the author/tags */
-$post-content-bottom-space: 1.9em; 
+$post-content-bottom-space: 1.9em;
 
 /* Space between posts in ems */
 $space-between-posts: 8;
